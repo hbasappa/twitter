@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tweet:</b>
+  <%= @tweet.tweet %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @tweet.author %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @tweet.location %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= distance_of_time_in_words_to_now(@tweet.updated_at) %> ago
+</p>
+
+
+<%= link_to 'Edit', edit_tweet_path(@tweet) %> |
+<%= link_to 'Back', tweets_path %>
